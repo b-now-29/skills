@@ -217,29 +217,48 @@ Skills I use daily for code work.
 **User-invoked**
 
 - **[ask-matt](./skills/engineering/ask-matt/SKILL.md)**: Ask which skill or flow fits your situation. A router over the user-invoked skills in this repo.
+-                                                         지금 상황에 어떤 스킬이나 흐름이 맞는지 골라줌
 - **[grill-with-docs](./skills/engineering/grill-with-docs/SKILL.md)**: Grilling session that also builds your project's domain model, sharpening terminology and updating `GLOSSARY.md` and ADRs inline.
+                                                                        grill-me + 용어집 + ADR
 - **[triage](./skills/engineering/triage/SKILL.md)**: Move issues through a state machine of triage roles.
+-                                                     이슈와 외부 PR을 단계별로 분류하고 검증해서, 에이전트가 바로 작업할 수 있는 요약을 작성
 - **[improve-codebase-architecture](./skills/engineering/improve-codebase-architecture/SKILL.md)**: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
+-                                                                                                   코드베이스에서 개선할 지점을 찾아 HTML 보고서로 보여주고, 고른 항목을 깊이 파고 듦                         
 - **[setup-matt-pocock-skills](./skills/engineering/setup-matt-pocock-skills/SKILL.md)**: Configure this repo for the engineering skills (issue tracker, triage labels, domain doc layout). Run once per repo before using the other engineering skills.
+-                                                                                         저장소에 처음 한번 실행하는 설정, 이슈 트래커, 분류 라벨, 도메인 문서 구조
 - **[to-spec](./skills/engineering/to-spec/SKILL.md)**: Turn the current conversation into a spec and publish it to the issue tracker. No interview, just synthesizes what you've already discussed.
+-                                                         지금까지 나눈 대화를 스펙으로 정리해서 이슈 트래커에 작성, 추가 질문 없이 정리만
 - **[to-tickets](./skills/engineering/to-tickets/SKILL.md)**: Break any plan, spec, or conversation into a set of tracer-bullet tickets, each declaring its blocking edges, written as text in a local file, or as native blocking links on a real tracker.
+-                                                             계획이나 스펙을 작은 티켓들로 나눔, 티켓마다 어떤 티켓에 막혀있는지 표시
 - **[implement](./skills/engineering/implement/SKILL.md)**: Build the work described by a spec or set of tickets, driving `/tdd` at pre-agreed seams and closing out with `/code-review` before committing.
+-                                                           스펙이나 티켓을 보고 구현
 - **[implement-spec](./skills/engineering/implement-spec/SKILL.md)**: Implement a whole spec on one integration branch. Works the tickets as a task graph, running implementer subagents across the ready frontier for maximum concurrency, then closes out with `/code-review`.
+-                                                                     /to-spec, /to-ticket을 이어 받아 구현
 - **[wayfinder](./skills/engineering/wayfinder/SKILL.md)**: Plan a huge chunk of work, more than one agent session can hold, as a shared map of decision tickets on the issue tracker, and resolve them one at a time until the way to the destination is clear.
+-                                                           세션 하나로 끝나지 않는 큰 작업을 결정 티켓 지도로 만들고 하나씩 푼다
 - **[retro](./skills/engineering/retro/SKILL.md)**: Suggest improvements to the coding agent's environment (navigation, automated checks, coding standards, steering files, tooling) after a session, most severe first.
+-                                                   코딩 세션 회고
 
 **Model-invoked**
 
 - **[prototype](./skills/engineering/prototype/SKILL.md)**: Build a throwaway prototype to answer a design question, either a single shareable HTML file for state/logic questions, or several radically different UI variations toggleable from one route.
+                                                            설계 질문(상태 모델, 로직, UI모양)에 답하고 버릴 프로토타입을 만듬
 - **[diagnosing-bugs](./skills/engineering/diagnosing-bugs/SKILL.md)**: Disciplined diagnosis loop for hard bugs and performance regressions: build a feedback loop that goes red on this bug → minimise → hypothesise → instrument → fix → regression-test.
+                                                                        어려운 버그나 성능 저하를 진단하는 루프. "debug this","왜 느려?" 같은 말에 반응
 - **[research](./skills/engineering/research/SKILL.md)**: Investigate a question against high-trust primary sources and capture the findings as a cited Markdown file in the repo, run as a background agent.
+                                                          공식 문서 같은 1차 자료로 조사하고, 결과를 저장소에 Markdown으로 남김
 - **[tdd](./skills/engineering/tdd/SKILL.md)**: Test-driven development with a red-green-refactor loop. Builds features or fixes bugs one vertical slice at a time.
+                                                테스트를 먼저 짜는 개발 (red-greend-refactor)과 통합 테스트를 작성
 - **[domain-modeling](./skills/engineering/domain-modeling/SKILL.md)**: Actively build and sharpen a project's domain model: challenge terms against the glossary, stress-test with edge-case scenarios, and update `GLOSSARY.md` and ADRs inline.
+                                                                        프로젝트 용어 정리, GLOSSARY.md와 ADR(설계 결정 기록)을 쓰거나 고침
 - **[codebase-design](./skills/engineering/codebase-design/SKILL.md)**: Shared discipline and vocabulary for designing deep modules: a lot of behaviour behind a small interface, placed at a clean seam, testable through that interface.
+                                                                        "깊은 모듈"관점으로 인터페이스, 경계 위치, 테스트 용이성을 설계할 떄 쓰는 공통 용어
 - **[code-review](./skills/engineering/code-review/SKILL.md)**: Two-axis review of the diff since a fixed point: **Standards** (does it follow the repo's coding standards, plus a Fowler smell baseline?) and **Spec** (does it faithfully implement the originating issue/spec?), run as parallel sub-agents so neither pollutes the other.
+                                                                특정 커밋, 브랜치 이후 변경을 두 기준으로 리뷰, 코딩 표준 준수, 스펙 일치, 서브 에이전트 두 개가 병렬로 작성
 - **[pr](./skills/engineering/pr/SKILL.md)**: The shape a pull request body should take: a summary as the smallest visual that makes the change clear, before/after evidence that it works, and a merge-danger call (one-way or two-way door, plus blast radius).
+                                            
 - **[wizard](./skills/engineering/wizard/SKILL.md)**: Generate an interactive bash wizard that walks a human through steps only they can perform: provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover.
-
+                                                      사람만 할 수 있는 단계(자격증명 설정, 외부 대시보드 조직, 일회성 마이그레이션)를 안내하는 대화형 bash 스크립트를 만듦
 ### Productivity
 
 General workflow tools, not code-specific.
@@ -247,12 +266,19 @@ General workflow tools, not code-specific.
 **User-invoked**
 
 - **[grill-me](./skills/productivity/grill-me/SKILL.md)**: Get relentlessly interviewed about a plan or design until every branch of the design tree is resolved.
+                                                            계획이나 설계를 집요하게 인터뷰
 - **[handoff](./skills/productivity/handoff/SKILL.md)**: Compact the current conversation into a handoff document so another agent can continue the work.
+-                                                        현재 대화를 다른 에이전트가 이어받을 인수인계 문서로 압축
 - **[teach](./skills/productivity/teach/SKILL.md)**: Teach the user a new skill or concept over multiple sessions, using the current directory as a stateful teaching workspace.
+-                                                    새 개념이나 기술을 지금 작업 공간 안에서 가르침
 - **[to-questionnaire](./skills/productivity/to-questionnaire/SKILL.md)**: Turn a decision you can't answer alone into a Markdown questionnaire for the one person who can, filled in async, or together over a meeting. It grills you about the send (who it's for, what you need back), not the subject.
+-                                                                          혼자 답할 수 없는 결정을 다른 사람이 채울 질문지로 만듦
 - **[wait-what](./skills/productivity/wait-what/SKILL.md)**: Fire this the moment a message doesn't land. The agent re-pitches it with the context you're missing, in plain English, using your `GLOSSARY.md` vocabulary.
+-                                                            설명이 이해가 안 될떄 실행하면 다른 방식으로 다시 설명
 
 **Model-invoked**
 
 - **[grilling](./skills/productivity/grilling/SKILL.md)**: Interview the user relentlessly about a plan, decision, or idea until every branch of the design tree is resolved. The reusable interview primitive behind `grill-me`, `grill-with-docs`, `triage`, `wayfinder` and `improve-codebase-architecture`.
+                                                           계획, 결정, 아이디어를 집요하게 캐물어서 허점 찾기
 - **[writing-for-agents](./skills/productivity/writing-for-agents/SKILL.md)**: Writing documents for agents: skills, AGENTS.md/CLAUDE.md, and any doc an agent reaches by a pointer.
+                                                                                스킬 파일, Agents.md, CLAUDE.md 처럼 에이전트가 읽을 문서 작성
